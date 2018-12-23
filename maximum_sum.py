@@ -1,17 +1,19 @@
-sMax = 0
+max = 0
 while True:
-    summing = 0
-    num = input("Give me a number: ")
+    sum = 0
+    num = input("Type a number: ")
     try:
         num = int(num)
 
     except ValueError:
-        print("You have not entered a proper number.")
+        print("Please enter a valid number.")
         break
 
-    summing = summing + num
+    sum = sum + num
 
-    if summing > sMax:
-        sMax = summing + sMax
-
-    print("The Biggest current sum is: ", sMax)
+    if sum > max:
+        max = sum + max
+        print("The Biggest current sum is: ", max)
+    else:
+        print("The number you inputed is smaller than the older sum, so this is the last sum for the program", max)
+        break
